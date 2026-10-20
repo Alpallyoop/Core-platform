@@ -85,3 +85,19 @@ This law has authority only as committed in the governance repository.
 A PHYSICAL measurement or physical benchmark run accepts ONLY sealed calibration records produced by the calibration
 lab (measured in situ, or certificate-backed and labelled as such). Typed calibration declarations are refused for
 physical runs; they remain permitted for clearly labelled simulated rehearsals, which are never evidence.
+
+## 10. Hardware calibration hardening (amendment A7, ratified 2026-10-20)
+
+Stricter-only additions. They never correct a measurement; they decide whether it may become evidence.
+
+1. **Microphone channel match (T0.6).** Two microphones whose relative timing defines an observable are qualified
+   together: one sealed take with the pair side by side (AB), one with the two swapped (BA), same inputs, gains and
+   sample rate, within 2 h. Chain mismatch (d_AB + d_BA)/2 must be ≤ 1 µs; placement (d_AB − d_BA)/2 ≤ 20 µs.
+   A physical Benchmark A run must bind an ACCEPTED record for exactly its two microphones on exactly its two inputs.
+2. **Gain binding.** A sensitivity calibration holds only at the gain marking recorded in it. A channel or apparatus
+   that declares a different gain, or none, cannot bind it.
+3. **Post-session bracket.** Every channel calibrated with an acoustic calibrator is checked again after the last
+   capture of the session (within 4 h; same serial and gain; |drift| ≤ 0.5 dB). A missing or failed check makes
+   every observable using that channel INCONCLUSIVE, never PASS or FAIL.
+4. **Benchmark A envelope.** The Benchmark A environment envelope is 18.0–20.5 °C and 30–60 % RH (pre-registration
+   amendment v1.2). New physical runs use v1.2; v1 and v1.1 keep their semantics (§7).
