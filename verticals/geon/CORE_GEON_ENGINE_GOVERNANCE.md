@@ -34,6 +34,18 @@ GEON performs deterministic Earth-frame numerics on sealed inputs:
 
 GEON emits derived measurement from provided inputs only.
 
+### 2.1 Amendment A1 (ratified 2026-10-20 by the owner)
+
+GEON may additionally evaluate, deterministically and without network access:
+- astronomical ephemerides of the Sun, Moon and catalogued stars (closed-form series, precession, nutation as declared
+  per lane) at declared times and sites (lane `sky_frame_network_v1`);
+- the solid-earth tidal potential and the tidal gravity / equilibrium tide it implies at declared times and sites
+  (lane `solid_earth_tide_v1`);
+- muon opacity (density-length along declared paths) as a potential-field / path-integral primitive (lane
+  `cavity_forward_models_v1`).
+A deterministic evaluation at declared times is a measurement-grade computation, not a forecast, warning or alert in
+the sense of §3; §3 and §7 remain fully binding.
+
 ## 3. Explicit Non-Scope
 
 GEON cannot:

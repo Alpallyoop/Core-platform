@@ -20,7 +20,7 @@ All equations must execute deterministically. Identical inputs, declared configu
 
 2.2 Speed Factor Law (Locked)
 
-Any engine lane that evolves time must support the discrete speed factors 0.25, 0.50, 0.75, and 1.00. Speed factor modifies time-step evolution only. It may not alter equations, units, invariant definitions, output schema, or contract semantics. Speed factor is a run-declared parameter and is sealed with the artifact.
+Any engine lane that evolves time must support the discrete speed factors 0.25, 0.50, 0.75, and 1.00. (Clarification A5, ratified 2026-10-20: the speed factor applies to lanes that expose real-time playback or interactive time evolution. Lanes that compute a complete deterministic run without playback record speed_factor = null in their sealed parameters; such lanes adopt 2.2 when they are versioned to add playback. Frozen lanes are not modified.) Speed factor modifies time-step evolution only. It may not alter equations, units, invariant definitions, output schema, or contract semantics. Speed factor is a run-declared parameter and is sealed with the artifact.
 
 2.3 Canonical Output Form and Normalization
 
@@ -64,6 +64,18 @@ NaN and Inf exclusion on all emitted numeric series values used by the invariant
 Parameter domain validity for R, C, dt, T (or lane-declared equivalents)
 
 Invariant failures are recorded and sealed. They are not suppressed. Failure is measurement truth and must remain auditable.
+
+3.1.3 Analytic magnetostatics (amendment A3, ratified 2026-10-20)
+
+Centred-dipole field B = (mu0 m / 4 pi r^3) (2 cos theta, sin theta); magnetised sphere / horizontal-cylinder anomaly fields in a declared inducing field; skin depth delta = sqrt(2 rho / (omega mu)). Closed form only. Required invariants: analytic divergence and curl of the computed field below declared tolerance; far-field decay ratios.
+
+3.1.4 Coupling estimates (amendment A3, ratified 2026-10-20)
+
+Piezoelectric open-circuit voltage V ~ d * sigma * L / (eps) with conduction relaxation tau = eps rho; streaming potential dV = (eps zeta / (eta sigma_f)) dP. Outputs are declared low/typical/high bands.
+
+3.1.5 GPR primitives (amendment A4, ratified 2026-10-20)
+
+v = c / sqrt(eps_r) (low-loss), two-way time t = 2 d / v, normal-incidence reflection coefficient R = (sqrt(eps1) - sqrt(eps2)) / (sqrt(eps1) + sqrt(eps2)).
 
 3.2 MAGNETAR (Engine Key: MAGNETAR)
 
@@ -135,7 +147,7 @@ Permitted primitives include pressure-temperature relationships, wind-coupled ex
 Domain: Earth-frame numerics and geophysical primitives
 Status: Governed (Implementation may be partial per lane)
 
-Permitted primitives include earth-frame transforms and declared field operators. Any implemented lane must declare coordinate assumptions, numeric tolerance, and invariant checks.
+Permitted primitives include earth-frame transforms and declared field operators. Amendment A1 (ratified 2026-10-20): also deterministic astronomical ephemerides (Meeus-class series with declared precession), the solid-earth tidal potential and its gravity / equilibrium-tide expressions (Love-number combinations declared per lane), and muon opacity as a density-length path integral (amendment A4). Any implemented lane must declare coordinate assumptions, numeric tolerance, and invariant checks.
 
 4. RGSR Fusion and Resolution Law
 

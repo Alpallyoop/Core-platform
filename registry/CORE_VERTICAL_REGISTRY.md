@@ -97,3 +97,19 @@ If an engine is not present in this registry, CORE must refuse to execute it.
 This registry is binding only as committed in Git.
 
 If it is not here, it does not exist inside CORE.
+
+---
+
+## 8. Amendment Log
+
+| Date | Amendment | Engine | Scope change |
+|---|---|---|---|
+| 2026-10-20 | A1 | GEON | + astronomical ephemerides, solid-earth tidal potential/gravity (lanes `sky_frame_network_v1`, `solid_earth_tide_v1`) |
+| 2026-10-20 | A2 | ATMOS | + capability keys CAP_SOUND_SPEED, CAP_AIR_ABSORPTION (lane `acoustic_air_state_v1`) |
+| 2026-10-20 | A3 | ELECTROMAGNETIC | + analytic magnetostatics and coupling estimates (lanes `analytic_magnetostatics_v1`, `coupling_estimates_v1`); MAGNETAR unchanged (field solvers, reserved) |
+| 2026-10-20 | A4 | ELECTROMAGNETIC, GEON | + GPR primitives (EM lane `gpr_primitives_v1`), muon opacity (GEON lane `cavity_forward_models_v1`) |
+| 2026-10-20 | A5 | all | speed-factor clarification (catalog 2.2) |
+| 2026-10-20 | A6 | platform | new law CORE_PHYSICAL_MEASUREMENT_AND_CALIBRATION_LAW.md |
+| 2026-10-20 | U1 | all | dual unit tagging (UNITS_AND_CONVERSIONS §4) |
+
+Ratified by the owner (Alec Maiatico) on 2026-10-20; record: governance/CORE_AMENDMENTS_2026-10-20.md.

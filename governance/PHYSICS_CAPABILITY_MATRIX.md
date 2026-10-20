@@ -16,6 +16,8 @@ Status: ✅ LOCKED | ✅ BINDING | ✅ NON-OPTIONAL
 - CAP_PRESSURE_GRADIENT (Pa/m canonical)
 - CAP_AIR_DENSITY (kg/m^3 canonical)
 - CAP_TEMPERATURE_PROFILE (K canonical)
+- CAP_SOUND_SPEED (m/s canonical) — amendment A2, 2026-10-20
+- CAP_AIR_ABSORPTION (dB/m canonical, unit-tagged) — amendment A2, 2026-10-20
 
 ### Hydrology / Earth (HYDRA / LITHOS)
 - CAP_TSUNAMI_WAVE_DYNAMICS (unit-tagged)
@@ -45,6 +47,9 @@ Status: ✅ LOCKED | ✅ BINDING | ✅ NON-OPTIONAL
 - CAP_CIRCUIT_DECAY_MODEL (unit-tagged)
 - CAP_EM_RESPONSE_SERIES (unit-tagged)
 - CAP_EM_INVARIANTS_V1 (validator-bound)
+- CAP_EM_ANALYTIC_MAGNETOSTATICS (nT / T canonical) — amendment A3, 2026-10-20
+- CAP_EM_COUPLING_ESTIMATES (V, unit-tagged; order-of-magnitude) — amendment A3, 2026-10-20
+- CAP_EM_GPR_PRIMITIVES (s, m, unit-tagged) — amendment A4, 2026-10-20
 
 ### Electromagnetic (MAGNETAR)
 - CAP_EM_FIELD_COUPLING (unit-tagged)
@@ -80,6 +85,9 @@ Status: ✅ LOCKED | ✅ BINDING | ✅ NON-OPTIONAL
 - CAP_GEON_FLUX_INTEGRAL
 - CAP_GEON_SLOPE_MAGNITUDE
 - CAP_GEON_POTENTIAL_FIELD_PRIMITIVE
+- CAP_GEON_EPHEMERIS (deg canonical display, rad SI) — amendment A1, 2026-10-20
+- CAP_GEON_TIDAL_POTENTIAL (m/s^2 canonical) — amendment A1, 2026-10-20
+- CAP_GEON_MUON_OPACITY (kg/m^2 canonical) — amendment A4, 2026-10-20
 
 ---
 

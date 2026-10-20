@@ -88,6 +88,31 @@ Deterministic measurement of RC discharge behavior using closed-form physics.
 - derived parameter `τ = R · C`
 - invariant evaluation report
 
+### Lane: `analytic_magnetostatics_v1` (amendment A3, ratified 2026-10-20)
+
+**Purpose**  
+Closed-form magnetostatic measurement primitives: centred-dipole geomagnetic field (declared coefficient set),
+total-field and vertical anomalies of uniformly magnetised sphere / horizontal cylinder bodies, electromagnetic skin depth.
+
+**Determinism Controls**  
+closed-form expressions only; no field solver, no PDE evolution, no boundary-conditioned propagation (those remain MAGNETAR's).
+
+**Invariants**  
+divergence-free and curl-free checks of the analytic field, dipole-limit and far-field decay ratios.
+
+### Lane: `coupling_estimates_v1` (amendment A3, ratified 2026-10-20)
+
+**Purpose**  
+Order-of-magnitude analytic estimates of electromechanical / electrokinetic coupling (piezoelectric voltage from stress
+in quartz-bearing rock with conduction relaxation; streaming potential from pore-pressure gradients). Outputs are
+low / typical / high bands from declared parameter ranges, never point predictions.
+
+### Lane: `gpr_primitives_v1` (amendment A4, ratified 2026-10-20)
+
+**Purpose**  
+Ground-penetrating-radar travel time, velocity and reflection-coefficient primitives from declared relative permittivity
+and conductivity (closed form; no wave solver).
+
 ---
 
 ## 5. Invariants (Binding)

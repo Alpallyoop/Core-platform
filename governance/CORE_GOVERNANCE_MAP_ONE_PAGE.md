@@ -23,6 +23,7 @@ CORE_PLATFORM_CONSTITUTION.md
 - Experiment Integrity & Reproducibility  
 - Telemetry & Consent  
 - Sensor I/O Safety  
+- Physical Measurement & Calibration (A6, 2026-10-20)  
 - Tenant & Data Separation  
 - Pricing & Entitlements  
 - Platform Operations & Admin Limits  
