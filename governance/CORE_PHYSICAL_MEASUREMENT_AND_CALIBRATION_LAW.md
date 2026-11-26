@@ -100,4 +100,11 @@ Stricter-only additions. They never correct a measurement; they decide whether i
    capture of the session (within 4 h; same serial and gain; |drift| ≤ 0.5 dB). A missing or failed check makes
    every observable using that channel INCONCLUSIVE, never PASS or FAIL.
 4. **Benchmark A envelope.** The Benchmark A environment envelope is 18.0–20.5 °C and 30–60 % RH (pre-registration
-   amendment v1.2). New physical runs use v1.2; v1 and v1.1 keep their semantics (§7).
+   amendment v1.2). New physical runs use v1.2 or later; v1 and v1.1 keep their semantics (§7).
+5. **Benchmark A tube and band (amendment A8, 2026-11-17).** A physical Benchmark A run declares the tube's internal
+   diameter with its uncertainty and an analysis band before capture (pre-registration amendment v1.3). The radius
+   minus its uncertainty must be at least 25 mm; the band must start at or above the tube fundamental
+   max(343.24 Hz, c/2L) and end below 0.8 times the first cross-mode cut-on of the tube. If the measured
+   energy-median frequency of the gated microphone-1 window lies outside the declared band, the sound-speed
+   observable is INCONCLUSIVE, never PASS or FAIL. The ±1 % threshold is unchanged. New physical runs use v1.3;
+   v1.2 records stay verifiable as v1.2.
